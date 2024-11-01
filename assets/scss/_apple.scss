@@ -1,0 +1,25 @@
+&--apple{
+  background-image: linear-gradient(to right, #F2528E 0%, #7433B5 100%);
+  .plyr{
+    &--audio{
+      .plyr__controls {
+        $thumb-color: #ff00ff;
+
+        input[type=range]:active{
+          &::-webkit-slider-thumb {
+            background: $thumb-color;
+          }
+          &::-moz-range-thumb {
+            background: $thumb-color;
+          }
+          &::-ms-thumb {
+            background: $thumb-color;
+          }
+        }
+
+      }
+
+    }
+
+  }
+}

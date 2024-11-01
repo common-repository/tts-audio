@@ -1,0 +1,439 @@
+.ttsaudio-plyr {
+  background: none;
+  position: relative;
+  border-radius: 4px;
+  /* == Skins ==*/
+  /* Playlist widget*/ }
+  .ttsaudio-plyr audio {
+    display: none; }
+  .ttsaudio-plyr--single {
+    margin-bottom: 2em; }
+    .ttsaudio-plyr--single__info {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: url(../img/info.svg) center no-repeat;
+      background-size: 70%;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 14px;
+      height: 14px;
+      text-decoration: none;
+      box-shadow: none !important;
+      outline: none !important;
+      border-top-left-radius: 4px;
+      border-bottom-right-radius: 3px; }
+      .ttsaudio-plyr--single__info:hover, .ttsaudio-plyr--single__info:focus, .ttsaudio-plyr--single__info:active {
+        text-decoration: none;
+        border: none;
+        box-shadow: none; }
+      .ttsaudio-plyr--default .ttsaudio-plyr--single__info {
+        background-color: #dbe3e8; }
+  .ttsaudio-plyr .plyr[max-width~="360px"] .plyr__volume {
+    display: none; }
+  .ttsaudio-plyr .plyr button {
+    background-color: unset; }
+  .ttsaudio-plyr .plyr .plyr__controls {
+    background: none;
+    border: none; }
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls .plyr__progress--buffer {
+    color: rgba(255, 255, 255, 0.7); }
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls .plyr__progress--played,
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls .plyr__volume--display {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls .plyr__progress--played,
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls .plyr__volume--display {
+    color: #fff; }
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls input[type=range]::-ms-fill-lower {
+    background: #fff; }
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls .plyr__time--current {
+    color: #fff; }
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls button {
+    color: #fff;
+    background: none; }
+    .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls button.tab-focus:focus, .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff; }
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .plyr__controls .ttsaudio-plyr--stopped > button {
+    background: none; }
+  .ttsaudio-plyr:not(.ttsaudio-plyr--default) .ttsaudio-plyr--playlist__list {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1); }
+    .ttsaudio-plyr:not(.ttsaudio-plyr--default) .ttsaudio-plyr--playlist__list li {
+      border-color: rgba(255, 255, 255, 0.3) !important;
+      color: rgba(255, 255, 255, 0.6); }
+      .ttsaudio-plyr:not(.ttsaudio-plyr--default) .ttsaudio-plyr--playlist__list li:hover, .ttsaudio-plyr:not(.ttsaudio-plyr--default) .ttsaudio-plyr--playlist__list li.active {
+        color: #fff; }
+      .ttsaudio-plyr:not(.ttsaudio-plyr--default) .ttsaudio-plyr--playlist__list li .postdate {
+        color: rgba(255, 255, 255, 0.5); }
+  .ttsaudio-plyr--default {
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #dbe3e8; }
+  .ttsaudio-plyr--canva {
+    background-image: linear-gradient(to right, #00C4CC 0%, #2599B9 30%, #684C96 100%); }
+    .ttsaudio-plyr--canva .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #2599B9; }
+    .ttsaudio-plyr--canva .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #2599B9; }
+    .ttsaudio-plyr--canva .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #2599B9; }
+  .ttsaudio-plyr--apple {
+    background-image: linear-gradient(to right, #F2528E 0%, #7433B5 100%); }
+    .ttsaudio-plyr--apple .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #ff00ff; }
+    .ttsaudio-plyr--apple .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #ff00ff; }
+    .ttsaudio-plyr--apple .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #ff00ff; }
+  .ttsaudio-plyr--amber {
+    background-color: #f0a30a; }
+    .ttsaudio-plyr--amber .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #f0a30a; }
+    .ttsaudio-plyr--amber .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #f0a30a; }
+    .ttsaudio-plyr--amber .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #f0a30a; }
+  .ttsaudio-plyr--dark {
+    background-color: #1C1C1C; }
+    .ttsaudio-plyr--dark .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #222; }
+    .ttsaudio-plyr--dark .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #222; }
+    .ttsaudio-plyr--dark .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #222; }
+    .ttsaudio-plyr--dark .ttsaudio-plyr--playlist__list {
+      background-color: #222 !important;
+      border: none;
+      color: #ccc; }
+      .ttsaudio-plyr--dark .ttsaudio-plyr--playlist__list li {
+        border-color: #454545 !important; }
+  .ttsaudio-plyr--mauve {
+    background-color: #76608a; }
+    .ttsaudio-plyr--mauve .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #76608a; }
+    .ttsaudio-plyr--mauve .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #76608a; }
+    .ttsaudio-plyr--mauve .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #76608a; }
+  .ttsaudio-plyr .widget .ttsaudio-plyr {
+    background-color: #f00; }
+  .ttsaudio-plyr--playlist__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    border-top: 1px solid #dbe3e8; }
+    .ttsaudio-plyr--playlist__list li {
+      margin: 0 20px;
+      padding: 12px 0px !important;
+      list-style: none;
+      cursor: pointer;
+      line-height: 1.6;
+      color: #565D64;
+      border: none !important;
+      border-bottom: 1px dotted #dbe3e8 !important; }
+      .ttsaudio-plyr--playlist__list li:last-child {
+        border-bottom: none !important; }
+      .ttsaudio-plyr--playlist__list li:hover, .ttsaudio-plyr--playlist__list li.active {
+        color: #3498db; }
+      .ttsaudio-plyr--playlist__list li .postdate {
+        color: rgba(0, 0, 0, 0.4);
+        font-style: oblique;
+        font-size: 80%; }
+  .ttsaudio-plyr--playlist .buttons {
+    display: none; }
+  .ttsaudio-plyr--playlist__author {
+    font-size: 10px;
+    padding: 10px 20px;
+    text-align: center; }
+    .ttsaudio-plyr--playlist__author a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      outline: none;
+      border: none;
+      box-shadow: none !important; }
+      .ttsaudio-plyr--playlist__author a:hover, .ttsaudio-plyr--playlist__author a:focus, .ttsaudio-plyr--playlist__author a:active {
+        color: #fff;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        box-shadow: none; }
+    .ttsaudio-plyr--default .ttsaudio-plyr--playlist__author {
+      border-top: 1px solid #dbe3e8; }
+      .ttsaudio-plyr--default .ttsaudio-plyr--playlist__author a {
+        color: rgba(0, 0, 0, 0.5); }
+        .ttsaudio-plyr--default .ttsaudio-plyr--playlist__author a:hover, .ttsaudio-plyr--default .ttsaudio-plyr--playlist__author a:focus, .ttsaudio-plyr--default .ttsaudio-plyr--playlist__author a:active {
+          color: rgba(0, 0, 0, 0.7); }
+  .ttsaudio-plyr--turquoise {
+    background-color: #1abc9c !important; }
+    .ttsaudio-plyr--turquoise .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #1abc9c !important; }
+    .ttsaudio-plyr--turquoise .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #1abc9c !important; }
+    .ttsaudio-plyr--turquoise .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #1abc9c !important; }
+  .ttsaudio-plyr--emerland {
+    background-color: #2ecc71 !important; }
+    .ttsaudio-plyr--emerland .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #2ecc71 !important; }
+    .ttsaudio-plyr--emerland .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #2ecc71 !important; }
+    .ttsaudio-plyr--emerland .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #2ecc71 !important; }
+  .ttsaudio-plyr--peterriver {
+    background-color: #3498db !important; }
+    .ttsaudio-plyr--peterriver .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #3498db !important; }
+    .ttsaudio-plyr--peterriver .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #3498db !important; }
+    .ttsaudio-plyr--peterriver .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #3498db !important; }
+  .ttsaudio-plyr--amethyst {
+    background-color: #9b59b6 !important; }
+    .ttsaudio-plyr--amethyst .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #9b59b6 !important; }
+    .ttsaudio-plyr--amethyst .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #9b59b6 !important; }
+    .ttsaudio-plyr--amethyst .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #9b59b6 !important; }
+  .ttsaudio-plyr--wetasphalt {
+    background-color: #34495e !important; }
+    .ttsaudio-plyr--wetasphalt .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #34495e !important; }
+    .ttsaudio-plyr--wetasphalt .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #34495e !important; }
+    .ttsaudio-plyr--wetasphalt .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #34495e !important; }
+  .ttsaudio-plyr--greensea {
+    background-color: #16a085 !important; }
+    .ttsaudio-plyr--greensea .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #16a085 !important; }
+    .ttsaudio-plyr--greensea .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #16a085 !important; }
+    .ttsaudio-plyr--greensea .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #16a085 !important; }
+  .ttsaudio-plyr--nephritis {
+    background-color: #27ae60 !important; }
+    .ttsaudio-plyr--nephritis .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #27ae60 !important; }
+    .ttsaudio-plyr--nephritis .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #27ae60 !important; }
+    .ttsaudio-plyr--nephritis .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #27ae60 !important; }
+  .ttsaudio-plyr--belizehole {
+    background-color: #2980b9 !important; }
+    .ttsaudio-plyr--belizehole .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #2980b9 !important; }
+    .ttsaudio-plyr--belizehole .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #2980b9 !important; }
+    .ttsaudio-plyr--belizehole .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #2980b9 !important; }
+  .ttsaudio-plyr--wisteria {
+    background-color: #8e44ad !important; }
+    .ttsaudio-plyr--wisteria .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #8e44ad !important; }
+    .ttsaudio-plyr--wisteria .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #8e44ad !important; }
+    .ttsaudio-plyr--wisteria .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #8e44ad !important; }
+  .ttsaudio-plyr--midnightblue {
+    background-color: #2c3e50 !important; }
+    .ttsaudio-plyr--midnightblue .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #2c3e50 !important; }
+    .ttsaudio-plyr--midnightblue .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #2c3e50 !important; }
+    .ttsaudio-plyr--midnightblue .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #2c3e50 !important; }
+  .ttsaudio-plyr--carrot {
+    background-color: #e67e22 !important; }
+    .ttsaudio-plyr--carrot .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #e67e22 !important; }
+    .ttsaudio-plyr--carrot .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #e67e22 !important; }
+    .ttsaudio-plyr--carrot .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #e67e22 !important; }
+  .ttsaudio-plyr--alizarin {
+    background-color: #e74c3c !important; }
+    .ttsaudio-plyr--alizarin .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #e74c3c !important; }
+    .ttsaudio-plyr--alizarin .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #e74c3c !important; }
+    .ttsaudio-plyr--alizarin .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #e74c3c !important; }
+  .ttsaudio-plyr--concrete {
+    background-color: #95a5a6 !important; }
+    .ttsaudio-plyr--concrete .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #95a5a6 !important; }
+    .ttsaudio-plyr--concrete .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #95a5a6 !important; }
+    .ttsaudio-plyr--concrete .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #95a5a6 !important; }
+  .ttsaudio-plyr--pumpkin {
+    background-color: #d35400 !important; }
+    .ttsaudio-plyr--pumpkin .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #d35400 !important; }
+    .ttsaudio-plyr--pumpkin .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #d35400 !important; }
+    .ttsaudio-plyr--pumpkin .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #d35400 !important; }
+  .ttsaudio-plyr--pomegranate {
+    background-color: #c0392b !important; }
+    .ttsaudio-plyr--pomegranate .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #c0392b !important; }
+    .ttsaudio-plyr--pomegranate .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #c0392b !important; }
+    .ttsaudio-plyr--pomegranate .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #c0392b !important; }
+  .ttsaudio-plyr--asbestos {
+    background-color: #7f8c8d !important; }
+    .ttsaudio-plyr--asbestos .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #7f8c8d !important; }
+    .ttsaudio-plyr--asbestos .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #7f8c8d !important; }
+    .ttsaudio-plyr--asbestos .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #7f8c8d !important; }
+  .ttsaudio-plyr--lime {
+    background-color: #a4c400 !important; }
+    .ttsaudio-plyr--lime .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #a4c400 !important; }
+    .ttsaudio-plyr--lime .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #a4c400 !important; }
+    .ttsaudio-plyr--lime .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #a4c400 !important; }
+  .ttsaudio-plyr--green {
+    background-color: #60a917 !important; }
+    .ttsaudio-plyr--green .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #60a917 !important; }
+    .ttsaudio-plyr--green .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #60a917 !important; }
+    .ttsaudio-plyr--green .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #60a917 !important; }
+  .ttsaudio-plyr--emerald {
+    background-color: #008a00 !important; }
+    .ttsaudio-plyr--emerald .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #008a00 !important; }
+    .ttsaudio-plyr--emerald .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #008a00 !important; }
+    .ttsaudio-plyr--emerald .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #008a00 !important; }
+  .ttsaudio-plyr--teal {
+    background-color: #00aba9 !important; }
+    .ttsaudio-plyr--teal .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #00aba9 !important; }
+    .ttsaudio-plyr--teal .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #00aba9 !important; }
+    .ttsaudio-plyr--teal .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #00aba9 !important; }
+  .ttsaudio-plyr--cyan {
+    background-color: #1ba1e2 !important; }
+    .ttsaudio-plyr--cyan .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #1ba1e2 !important; }
+    .ttsaudio-plyr--cyan .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #1ba1e2 !important; }
+    .ttsaudio-plyr--cyan .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #1ba1e2 !important; }
+  .ttsaudio-plyr--cobalt {
+    background-color: #0050ef !important; }
+    .ttsaudio-plyr--cobalt .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #0050ef !important; }
+    .ttsaudio-plyr--cobalt .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #0050ef !important; }
+    .ttsaudio-plyr--cobalt .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #0050ef !important; }
+  .ttsaudio-plyr--indigo {
+    background-color: #6a00ff !important; }
+    .ttsaudio-plyr--indigo .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #6a00ff !important; }
+    .ttsaudio-plyr--indigo .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #6a00ff !important; }
+    .ttsaudio-plyr--indigo .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #6a00ff !important; }
+  .ttsaudio-plyr--violet {
+    background-color: #aa00ff !important; }
+    .ttsaudio-plyr--violet .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #aa00ff !important; }
+    .ttsaudio-plyr--violet .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #aa00ff !important; }
+    .ttsaudio-plyr--violet .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #aa00ff !important; }
+  .ttsaudio-plyr--pink {
+    background-color: #f472d0 !important; }
+    .ttsaudio-plyr--pink .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #f472d0 !important; }
+    .ttsaudio-plyr--pink .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #f472d0 !important; }
+    .ttsaudio-plyr--pink .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #f472d0 !important; }
+  .ttsaudio-plyr--magenta {
+    background-color: #d80073 !important; }
+    .ttsaudio-plyr--magenta .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #d80073 !important; }
+    .ttsaudio-plyr--magenta .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #d80073 !important; }
+    .ttsaudio-plyr--magenta .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #d80073 !important; }
+  .ttsaudio-plyr--crimson {
+    background-color: #a20025 !important; }
+    .ttsaudio-plyr--crimson .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #a20025 !important; }
+    .ttsaudio-plyr--crimson .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #a20025 !important; }
+    .ttsaudio-plyr--crimson .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #a20025 !important; }
+  .ttsaudio-plyr--red {
+    background-color: #e51400 !important; }
+    .ttsaudio-plyr--red .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #e51400 !important; }
+    .ttsaudio-plyr--red .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #e51400 !important; }
+    .ttsaudio-plyr--red .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #e51400 !important; }
+  .ttsaudio-plyr--orange {
+    background-color: #fa6800 !important; }
+    .ttsaudio-plyr--orange .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #fa6800 !important; }
+    .ttsaudio-plyr--orange .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #fa6800 !important; }
+    .ttsaudio-plyr--orange .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #fa6800 !important; }
+  .ttsaudio-plyr--yellow {
+    background-color: #e3c800 !important; }
+    .ttsaudio-plyr--yellow .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #e3c800 !important; }
+    .ttsaudio-plyr--yellow .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #e3c800 !important; }
+    .ttsaudio-plyr--yellow .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #e3c800 !important; }
+  .ttsaudio-plyr--brown {
+    background-color: #825a2c !important; }
+    .ttsaudio-plyr--brown .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #825a2c !important; }
+    .ttsaudio-plyr--brown .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #825a2c !important; }
+    .ttsaudio-plyr--brown .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #825a2c !important; }
+  .ttsaudio-plyr--olive {
+    background-color: #6d8764 !important; }
+    .ttsaudio-plyr--olive .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #6d8764 !important; }
+    .ttsaudio-plyr--olive .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #6d8764 !important; }
+    .ttsaudio-plyr--olive .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #6d8764 !important; }
+  .ttsaudio-plyr--steel {
+    background-color: #647687 !important; }
+    .ttsaudio-plyr--steel .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #647687 !important; }
+    .ttsaudio-plyr--steel .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #647687 !important; }
+    .ttsaudio-plyr--steel .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #647687 !important; }
+  .ttsaudio-plyr--sienna {
+    background-color: #a0522d !important; }
+    .ttsaudio-plyr--sienna .plyr--audio .plyr__controls input[type=range]:active::-webkit-slider-thumb {
+      background: #a0522d !important; }
+    .ttsaudio-plyr--sienna .plyr--audio .plyr__controls input[type=range]:active::-moz-range-thumb {
+      background: #a0522d !important; }
+    .ttsaudio-plyr--sienna .plyr--audio .plyr__controls input[type=range]:active::-ms-thumb {
+      background: #a0522d !important; }
+
+/*# sourceMappingURL=style.css.map */

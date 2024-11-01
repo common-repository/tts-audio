@@ -1,0 +1,25 @@
+&--mauve{
+  background-color: #76608a;
+  .plyr{
+    &--audio{
+      .plyr__controls {
+
+        $thumb-color: #76608a;
+
+        input[type=range]:active{
+          &::-webkit-slider-thumb {
+            background: $thumb-color;
+          }
+          &::-moz-range-thumb {
+            background: $thumb-color;
+          }
+          &::-ms-thumb {
+            background: $thumb-color;
+          }
+        }
+      }
+
+    }
+
+  }
+}
